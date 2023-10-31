@@ -37,4 +37,4 @@ class Bookings:
         return self._price
     
     def __str__(self):
-        return f'{self._code} dagi kvartiraga\n{self._client_id} id dagi mijoz\n{self._day}/{self._month}/{self._year} vaqti\n{self._week} haftaga\nBahosi {self._price} '
+        return f'{self._code} dagi kvartiraga\n{self._client_id} id dagi mijoz\n{self._day}/{self._month}/{self._year} vaqti\n{self._week} haftaga\nNarxi -- {self._price} '
