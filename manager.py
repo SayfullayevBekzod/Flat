@@ -11,7 +11,16 @@ class Manager:
         print('Kvartira yaratildi!!..')
         return flat
     
+    def getFlat(self, kod: Flat):
+        for flat in self._flat_list:
+            if flat._kod == kod:
+                return flat
+                
     def newClient(self, ism: Client, familya: Client, id: Client):
+        for client in self._client_list:
+            if client.id == id:
+                print('Mijoz mavjud')
+                return None
         client = Client(ism, familya, id)
         self._client_list.append(client)
         print('Mijoz yaratildi!!..')
@@ -23,8 +32,8 @@ class Manager:
                 return client
         return f'Bu {id} id lik mijoz mavjud emas!!..'
     
-    #def getClietnts(self):
-    #    return self._client_list
+    def getClients(self):
+        return self._client_list
     
     def bookFlat(self, code, client_id, day, month, year, week, price):
         bookings = Bookings(code, client_id, day, month, year, week, price)
