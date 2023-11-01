@@ -19,7 +19,7 @@ class Manager:
     def newClient(self, ism: Client, familya: Client, id: Client):
         for client in self._client_list:
             if client.id == id:
-                print('Mijoz mavjud')
+                print('Mijozni yana qo\'shmoqdasiz!')
                 return None
         client = Client(ism, familya, id)
         self._client_list.append(client)
